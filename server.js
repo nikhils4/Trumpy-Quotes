@@ -28,9 +28,6 @@ app.get('/quote', (req,res) => {
 
 });
 
-app.get('/name', (req, res) => {
-    res.render('name.hbs');
-});
 
 
 app.listen(port, () => {
