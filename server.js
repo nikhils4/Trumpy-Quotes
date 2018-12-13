@@ -1,6 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
-const MongoClient = require('mongodb').MongoClient;
+const qt = require('./qt.js');
 
 const port = process.env.PORT || 3000;
 
@@ -8,12 +8,32 @@ var app = express();
 app.use(express.static(__dirname + '/views/styles') );
 app.set('view engine', hbs);
 
-
 app.get('/', (req,res) => {
-    res.render('front.hbs');
+    res.render('main.hbs');
 });
 
 
 app.get('/quote', (req,res) => {
-    res.render('result.hbs');
+    qt.getQuotes((error, quote) => {
+        if(error){
+            res.render('error.hbs')
+        }
+        else {
+            res.render('quote.hbs', {
+                quote : quote.quotes
+            })
+        }
+    })
+
+
 });
+
+app.get('/name', (req, res) => {
+    res.render('name.hbs');
+});
+
+
+app.listen(port, () => {
+    console.log('Server is up at port : ', port)
+    }
+);

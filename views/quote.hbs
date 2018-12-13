@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script type="text/javascript">
+        var app=angular.module("app",[]);
+        app.controller("emp",['$scope',function($scope){
+            $scope.quote='{{quote}}';
+        }]);
+    </script>
+</head>
+<body ng-app="app" ng-controller="emp">
+        Here the quotes will be there<br> {{quote}}
+</body>
+
+<form method="get" action="/quote" >
+    <button type="submit">Get more quotes</button>
+</form>
+
+</html>
