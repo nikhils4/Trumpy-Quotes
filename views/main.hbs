@@ -5,13 +5,28 @@
     <title>Quotes | DSC</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .card {
+            z-index: 1;
+            background: white;
+            display: inline-block;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.3);
+        }
+        button, button:focus {
+            outline: none;
+            border: 0;
+            cursor: pointer;
+            
+        }
+    </style>
 </head>
 <body style="text-align: center; height: 100%; font-family: 'Montserrat', sans-serif; font-size: 25px">
-<h1 style="text-align: center; margin-top: 60px; font-size: 40px ;">Trumpy Quotes</h1>
-<p id="greet" ></p>
-<p>Generate quote by pressing the button at the bottom</p>
-<form method="get" action="/quote" >
-    <button type="submit">Get quotes</button>
+<h1 style="text-align: center; margin-top: 60px; font-size: 80px;margin-bottom: 120px; ">Trumpy Quotes</h1>
+<p id="greet" style="font-size: 40px; padding: 0 50px 0  50px; margin-top: 150px; margin-bottom: 40px; " ></p>
+<p style="font-size: 25px">Generate quote by pressing the button at the bottom</p>
+<form method="get" action="/quote" style="margin-top: 150px" >
+    <button class="card" style="padding: 25px; width: 300px; border-radius: 40px; font-size: 25px; margin-top: 80px;" type="submit">Get quotes</button>
 </form>
 <script>
 
