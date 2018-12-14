@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>Quotes | DSC</title>
@@ -32,13 +34,13 @@
 </head>
 
 
-<body ng-app="app" ng-controller="emp" style="text-align: center; font-family: 'Montserrat', sans-serif;">
+<body ng-app="app" ng-controller="emp" style="text-align: center; font-family: 'Montserrat', sans-serif;" class= mb-4">
 <h1 style="text-align: center; margin-top: 60px; font-size: 80px;margin-bottom: 120px; ">Trumpy Quotes</h1>
 <span style="font-size: 30px; padding: 0 50px 0  50px;  ">{{quote}}</span>
 
 
 <form method="get" action="/quote" style="margin-top: 40px;">
-    <button type="submit" class="card" style="padding: 25px; width: 300px; border-radius: 40px; font-size: 25px; margin-top: 80px;" >Get more quotes</button>
+    <button type="submit" class="card" style="color: black;padding: 25px; width: 300px; border-radius: 40px; font-size: 25px; margin-top: 80px;" >Get more quotes</button>
 </form>
 
 </body>
