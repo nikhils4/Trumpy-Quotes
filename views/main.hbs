@@ -23,11 +23,11 @@
         }
     </style>
 </head>
-<body style="text-align: center; height: 100%; font-family: 'Montserrat', sans-serif; font-size: 25px" class=" mb-4">
+<body style="text-align: center; font-family: 'Montserrat', sans-serif; font-size: 25px" class=" mb-4">
 <h1 style="text-align: center; margin-top: 60px; font-size: 80px;margin-bottom: 120px; ">Trumpy Quotes</h1>
 <p id="greet" style="font-size: 40px; padding: 0 50px 0  50px; margin-top: 150px; margin-bottom: 40px; " ></p>
 <p style="font-size: 25px">Generate quote by pressing the button at the bottom</p>
-<form method="get" action="/quote" style="margin-top: 150px" >
+<form method="get" action="/quote" style="margin-top: 100px" >
     <button class="card" style="color: black;padding: 20px; width: 300px; border-radius: 40px; font-size: 25px; margin-top: 60px;" type="submit">Get quotes</button>
 </form>
 <script>
@@ -37,17 +37,23 @@
     if(time < 4) {
         $('#greet').text('Good night');
         $('html').css({background : "linear-gradient(to right, #000428, #004e92)",
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
         color : "white"});
     }
     else if (time > 4 && time < 12) {
         $('#greet').text('Good morning');
         $('body').css({background: "linear-gradient(to right, #56ccf2, #2f80ed)",
-            color : "white"});
+            backgroundRepeat : "no-repeat",
+            color : "white",
+        backgroundSize : "cover"} );
 
     }
     else if (time < 17) {
         $('#greet').text('Good afternoon');
         $('body').css({background :"linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)",
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
         color : 'black'});
 
 
@@ -55,12 +61,16 @@
     else if (time < 21) {
         $('#greet').text('Good evening');
         $('body').css({background :"#f3e7e9",
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
         color : 'black'});
 
     }
     else if (time < 24) {
         $('#greet').text('Good night');
         $('body').css({background :"linear-gradient(to right, #000428, #004e92)" ,
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
         color : 'white'});
 
     }

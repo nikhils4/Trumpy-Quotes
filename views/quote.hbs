@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
@@ -48,20 +48,27 @@
 
     var d = new Date();
     var time = d.getHours();
+
     if(time < 4) {
         $('#greet').text('Good night');
         $('html').css({background : "linear-gradient(to right, #000428, #004e92)",
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
             color : "white"});
     }
     else if (time > 4 && time < 12) {
         $('#greet').text('Good morning');
         $('body').css({background: "linear-gradient(to right, #56ccf2, #2f80ed)",
-            color : "white"});
+            backgroundRepeat : "no-repeat",
+            color : "white",
+            backgroundSize : "cover"} );
 
     }
     else if (time < 17) {
         $('#greet').text('Good afternoon');
         $('body').css({background :"linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)",
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
             color : 'black'});
 
 
@@ -69,12 +76,16 @@
     else if (time < 21) {
         $('#greet').text('Good evening');
         $('body').css({background :"#f3e7e9",
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
             color : 'black'});
 
     }
     else if (time < 24) {
         $('#greet').text('Good night');
         $('body').css({background :"linear-gradient(to right, #000428, #004e92)" ,
+            backgroundRepeat : "no-repeat",
+            backgroundSize : "cover",
             color : 'white'});
 
     }
